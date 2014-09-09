@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+<PreferenceCategory android:title="@string/settings" >
+<CheckBoxPreference
+android:defaultValue="false"
+android:key="backupPref"
+android:summary="@string/settings1"
+android:title="@string/settings2" />
+<EditTextPreference
+                android:key="edit_text"
+                android:title="Edit Text Preference"
+                android:dialogLayout="@layout/spinner"
+                android:summary="What to do?"/> 
+                   <com.dlka.android.apps.android_overlay.TimePreference
+        android:key="timePrefA_Key"
+        android:title="@string/timePrefA_title"/>    
+    <com.dlka.android.apps.android_overlay.TimePreference
+        android:key="timePrefB_Key"
+        android:title="@string/timePrefB_title"/>
+                
+<Preference android:title="@string/prefs_web_page" >
+    <intent android:action="android.intent.action.VIEW"
+            android:data="http://www.example.com" />
+</Preference>
+</PreferenceCategory>
+<PreferenceCategory
+android:summary="@string/about_sum"
+android:title="@string/about_text" >
+<Preference
+android:defaultValue="0"
+android:key="aboutPref"
+android:selectable="true"
+android:summary="@string/about_sum"
+android:title="@string/about_text" />
+
+</PreferenceCategory>
+</PreferenceScreen>

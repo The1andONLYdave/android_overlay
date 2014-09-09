@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">android overlay</string>
+    <string name="app_name">20min Pause</string>
 
-    <string name="title_notification">android overlay</string>
-    <string name="message_notification">Drücke zum ausblenden</string>
-                       
+    <string name="title_notification">20min Pause</string>
+    <string name="message_notification">Klicke hier zum Entsperren/Beenden</string>
+    <string name="textview">Pause\nBenachrichtigungliste herunterziehen und Benachrichtigung anklicken zum Beenden.\n Wenn du noch eine Pause einstellen willst, starte einfach die App noch einmal!</string>
+    <string name="prefs_web_page">TODO</string>
+    <string name="settings">Einstellungen</string>
+    <string name="about_text">TODO</string>
+    <string name="about_sum">TODO</string>
+     <string name="settings1">TODO</string>
+     <string name="settings2">TODO</string>
+    <string name="timePrefA_title">TODO</string>
+     <string name="timePrefB_title">TODO</string>
 </resources>

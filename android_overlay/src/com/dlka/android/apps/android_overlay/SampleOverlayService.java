@@ -23,7 +23,9 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.os.SystemClock;
+import android.preference.PreferenceManager;
 import android.widget.Toast;
 
 import com.jawsware.core.share.OverlayService;
@@ -37,24 +39,6 @@ public class SampleOverlayService extends OverlayService {
       BroadcastReceiver br;
       AlarmManager am;
       
-//	public class Reminder {
-//	    Timer timer;
-//	    TimerTask task;
-//	    
-//	    public Reminder(int seconds) {
-//	        timer = new Timer();
-//	        timer.schedule(new RemindTask(), seconds*1000);
-//		}
-//
-//	    class RemindTask extends TimerTask {
-//	        public void run() {
-//	           Log.d("timer","Time's up!%n");
-//	            timer.cancel(); //Terminate the timer thread
-//	            //instance.stopSelf();
-//	         }
-//	    }
-//
-//	}
 	private void setup() {
 	      br = new BroadcastReceiver() {
 	             @Override
@@ -74,33 +58,29 @@ public class SampleOverlayService extends OverlayService {
 	public void onCreate() {
 		super.onCreate();
 		setup();
-	    //getDefinedTime();
+		//get preferences
+		//SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+		//String syncConnPref = sharedPref.getString(SettingsActivity.aboutPref, "1");
+		SharedPreferences prefs = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+		boolean haveWeShownPreferences = prefs.getBoolean("HaveShownPrefs", false);
+
+		if(!haveWeShownPreferences)//if no preferences open activity
+		{
+			Intent i = new Intent(this, SettingsActivity.class);  
+			i.setFlags(Intent.FLAG_ACTIVITY_MULTIPLE_TASK);                     
+			i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);  
+
+			// Launch the new activity and add the additional flags to the intent
+			
+			 startActivity(i);
+		}
+		else
+		{//getDefinedTime();
 		am.set( AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + 
 	    		 DEFINED_TIME, pi );
 	    Toast.makeText(this, "Pause in "+DEFINED_TIME/1000/60+" Minuten", Toast.LENGTH_LONG).show();
+	    }
 	}
-	
-//	private void getDefinedTime() {
-//		 EditText input = new EditText(this);
-//	     input.setId(1000);          
-//	     AlertDialog dialog = new AlertDialog.Builder(this)
-//	             .setView(input).setTitle("Wie lange soll es bis zur Pause sein?")
-//	             .setPositiveButton("Ok",
-//	                     new DialogInterface.OnClickListener() {
-//
-//	                         @Override
-//	                         public void onClick(DialogInterface dialog,
-//	                                 int which) {
-//	                             EditText theInput = (EditText) ((AlertDialog) dialog)
-//	                                     .findViewById(1000);
-//	                           DEFINED_TIME = (Integer.parseInt(theInput.getText().toString())*1000);
-//	                             
-//	                                 
-//	                             
-//	                         }
-//	                     }).create();
-//	     dialog.show();
-//	}
 
 	public void onLock(){
         instance = this;
@@ -120,7 +100,6 @@ public class SampleOverlayService extends OverlayService {
 	static public void stop() {
 		if (instance != null) {
 			instance.stopSelf();
-			// mHandler.removeCallbacks(mUpdateTimeTask);
 		}
 	}
 	

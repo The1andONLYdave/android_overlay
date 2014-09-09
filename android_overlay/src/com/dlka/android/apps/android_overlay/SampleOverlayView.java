@@ -38,7 +38,8 @@ public class SampleOverlayView extends OverlayView {
 	@Override
 	protected void onInflateView() {
 		info = (TextView) this.findViewById(R.id.textview_info);
-		info.setText("Pause\nBenachrichtigung anklicken zum beenden.\n App neustarten für neue Pause einstellen.");
+		info.setText("@string/textview");
+		
 	}
 
 

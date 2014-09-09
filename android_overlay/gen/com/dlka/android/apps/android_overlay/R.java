@@ -15,14 +15,28 @@ public final class R {
         public static final int overlay_back=0x7f020001;
     }
     public static final class id {
-        public static final int textview_info=0x7f050000;
+        public static final int spinner=0x7f060001;
+        public static final int textview_info=0x7f060000;
     }
     public static final class layout {
         public static final int overlay=0x7f030000;
+        public static final int spinner=0x7f030001;
     }
     public static final class string {
-        public static final int app_name=0x7f040000;
-        public static final int message_notification=0x7f040002;
-        public static final int title_notification=0x7f040001;
+        public static final int about_sum=0x7f050007;
+        public static final int about_text=0x7f050006;
+        public static final int app_name=0x7f050000;
+        public static final int message_notification=0x7f050002;
+        public static final int prefs_web_page=0x7f050004;
+        public static final int settings=0x7f050005;
+        public static final int settings1=0x7f050008;
+        public static final int settings2=0x7f050009;
+        public static final int textview=0x7f050003;
+        public static final int timePrefA_title=0x7f05000a;
+        public static final int timePrefB_title=0x7f05000b;
+        public static final int title_notification=0x7f050001;
+    }
+    public static final class xml {
+        public static final int preferences=0x7f040000;
     }
 }
