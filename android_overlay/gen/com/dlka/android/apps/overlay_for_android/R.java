@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.dlka.android.apps.android_overlay;
+package com.dlka.android.apps.overlay_for_android;
 
 public final class R {
     public static final class attr {

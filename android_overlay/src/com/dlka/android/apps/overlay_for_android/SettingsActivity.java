@@ -1,9 +1,10 @@
-package com.dlka.android.apps.android_overlay;
+package com.dlka.android.apps.overlay_for_android;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
+import com.dlka.android.apps.overlay_for_android.R;
 
 public class SettingsActivity extends PreferenceActivity {
     @Override

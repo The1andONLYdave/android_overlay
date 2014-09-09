@@ -1,4 +1,4 @@
-package com.dlka.android.apps.android_overlay;
+package com.dlka.android.apps.overlay_for_android;
 
 /*
 Copyright 2011 jawsware international
@@ -17,18 +17,17 @@ limitations under the License.
 */
 
 import android.app.Activity;
-import android.content.Intent;
 
 import android.os.Bundle;
 
-public class SampleOverlayShowActivity extends Activity {
+public class SampleOverlayHideActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
 		
-		startService(new Intent(this, SampleOverlayService.class));
+		SampleOverlayService.stop();
 			
 		finish();
 		

@@ -1,4 +1,4 @@
-package com.dlka.android.apps.android_overlay;
+package com.dlka.android.apps.overlay_for_android;
 
 import android.content.Context;
 import android.content.res.TypedArray;

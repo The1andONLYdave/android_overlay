@@ -1,4 +1,4 @@
-package com.dlka.android.apps.android_overlay;
+package com.dlka.android.apps.overlay_for_android;
 
 /*
 Copyright 2011 jawsware international
@@ -19,6 +19,7 @@ limitations under the License.
 import android.view.Gravity;
 import android.widget.TextView;
 
+import com.dlka.android.apps.overlay_for_android.R;
 import com.jawsware.core.share.OverlayService;
 import com.jawsware.core.share.OverlayView;
 

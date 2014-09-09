@@ -1,4 +1,4 @@
-package com.dlka.android.apps.android_overlay;
+package com.dlka.android.apps.overlay_for_android;
 
 /*
 Copyright 2011 jawsware international
@@ -28,6 +28,7 @@ import android.os.SystemClock;
 import android.preference.PreferenceManager;
 import android.widget.Toast;
 
+import com.dlka.android.apps.overlay_for_android.R;
 import com.jawsware.core.share.OverlayService;
 
 public class SampleOverlayService extends OverlayService {
@@ -48,8 +49,8 @@ public class SampleOverlayService extends OverlayService {
 	                    onLock();
 	                    }
 	             };
-	      registerReceiver(br, new IntentFilter("com.dlka.android.apps.android_overlay") );
-	      pi = PendingIntent.getBroadcast( this, 0, new Intent("com.dlka.android.apps.android_overlay"),
+	      registerReceiver(br, new IntentFilter("com.dlka.android.apps.overlay_for_android") );
+	      pi = PendingIntent.getBroadcast( this, 0, new Intent("com.dlka.android.apps.overlay_for_android"),
 	0 );
 	      am = (AlarmManager)(this.getSystemService( Context.ALARM_SERVICE ));
 	}

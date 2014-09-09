@@ -11,10 +11,10 @@ android:title="@string/settings2" />
                 android:title="Edit Text Preference"
                 android:dialogLayout="@layout/spinner"
                 android:summary="What to do?"/> 
-                   <com.dlka.android.apps.android_overlay.TimePreference
+                   <com.dlka.android.apps.overlay_for_android.TimePreference
         android:key="timePrefA_Key"
         android:title="@string/timePrefA_title"/>    
-    <com.dlka.android.apps.android_overlay.TimePreference
+    <com.dlka.android.apps.overlay_for_android.TimePreference
         android:key="timePrefB_Key"
         android:title="@string/timePrefB_title"/>
                 
