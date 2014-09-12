@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">20min Pause</string>
+    <string name="app_name">Mach mal Pause für AndroidBeta</string>
 
-    <string name="title_notification">20min Pause</string>
-    <string name="message_notification">Klicke hier zum Entsperren/Beenden</string>
+    <string name="title_notification">Pause machen!</string>
+    <string name="message_notification">Klicke hier zum Beenden der Pause.</string>
     <string name="textview">Pause\nBenachrichtigungliste herunterziehen und Benachrichtigung anklicken zum Beenden.\n Wenn du noch eine Pause einstellen willst, starte einfach die App noch einmal!</string>
-    <string name="prefs_web_page">TODO</string>
+    <string name="prefs_web_page">Unsers Webseite(Später: Anleitung anzeigen)</string>
     <string name="settings">Einstellungen</string>
-    <string name="about_text">TODO</string>
-    <string name="about_sum">TODO</string>
-     <string name="settings1">TODO</string>
-     <string name="settings2">TODO</string>
-    <string name="timePrefA_title">TODO</string>
-     <string name="timePrefB_title">TODO</string>
+    <string name="about_text">Programmiert von:</string>
+    <string name="about_sum">David-Lee Kulsch - Hosted auf github.com/The1andONLYdave/android_overlay/</string>
+    <string name="settings1">Diesen Bildschirm bei Appstart anzeigen?</string>
+    <string name="settings2">Im nächsten Update kannst du das automatische Öffnen der Einstellungen hier deaktivieren</string>
+    <string name="timePrefA_title">Zeit bis Pause</string>
+    <string name="timePrefB_title">Zeit bis Pause2</string>
+    <string-array name="array_name">
+		<item>Benachrichtigung</item>
+		<item>Nur lange vibrieren</item>
+		<item>Sound abspielen</item>
+		<item>Bildschirm kurz ausschalten</item>
+		<item>Bildschirm sperren(Standard) bis Benachrichtigung angeklickt wird</item>
+</string-array>
 </resources>

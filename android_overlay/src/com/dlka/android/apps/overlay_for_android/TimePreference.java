@@ -1,11 +1,14 @@
 package com.dlka.android.apps.overlay_for_android;
 
+
+
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.preference.DialogPreference;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 public class TimePreference extends DialogPreference {
     private int lastHour=0;
@@ -27,14 +30,14 @@ public class TimePreference extends DialogPreference {
     public TimePreference(Context ctxt, AttributeSet attrs) {
         super(ctxt, attrs);
 
-        setPositiveButtonText("Set");
-        setNegativeButtonText("Cancel");
+        setPositiveButtonText("Ok");
+        setNegativeButtonText("Abbrechen");
     }
 
     @Override
     protected View onCreateDialogView() {
         picker=new TimePicker(getContext());
-
+        picker.setIs24HourView(true);
         return(picker);
     }
 
@@ -55,9 +58,10 @@ public class TimePreference extends DialogPreference {
             lastMinute=picker.getCurrentMinute();
 
             String time=String.valueOf(lastHour)+":"+String.valueOf(lastMinute);
-
+            
             if (callChangeListener(time)) {
                 persistString(time);
+                
             }
         }
     }

@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
+import android.widget.Toast;
+
 import com.dlka.android.apps.overlay_for_android.R;
 
 public class SettingsActivity extends PreferenceActivity {
@@ -16,5 +18,7 @@ public class SettingsActivity extends PreferenceActivity {
        // ed.putBoolean("HaveShownPrefs", true);
         ed.putBoolean("HaveShownPrefs", false);
         ed.commit();
+        Toast.makeText(this, "Bitte Timer einstellen", Toast.LENGTH_LONG).show();
+        
     }
 }

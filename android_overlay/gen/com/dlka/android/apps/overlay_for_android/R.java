@@ -8,6 +8,9 @@
 package com.dlka.android.apps.overlay_for_android;
 
 public final class R {
+    public static final class array {
+        public static final int array_name=0x7f060000;
+    }
     public static final class attr {
     }
     public static final class drawable {
@@ -15,8 +18,8 @@ public final class R {
         public static final int overlay_back=0x7f020001;
     }
     public static final class id {
-        public static final int spinner=0x7f060001;
-        public static final int textview_info=0x7f060000;
+        public static final int spinner=0x7f070001;
+        public static final int textview_info=0x7f070000;
     }
     public static final class layout {
         public static final int overlay=0x7f030000;
